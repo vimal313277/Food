@@ -1,0 +1,1117 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* ===== navbar start ====== */
+
+.lgwh {
+    width: 70%;
+}
+
+.mngmntul {
+    width: 50%;
+    margin-left: 49%;
+    justify-content: space-between;
+}
+
+.mainnvbr {
+    top: 6px !important;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-family: "Montserrat";
+    font-weight: 400 !important;
+}
+
+.menu {
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+}
+
+/* I hide the checkbox because I only need the label */
+#check {
+    display: none;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    background: #ffc200;
+    padding: 8px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    padding-top: 1px;
+    line-height: 3px;
+    text-align: left;
+    position: fixed;
+    right: 27px;
+    top: 18px;
+    z-index: 201;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: #ff9d00;
+}
+
+.button span {
+    height: 3px;
+    width: 100%;
+    background: white;
+    display: inline-block;
+    transition: all 0.5s cubic-bezier(.62, .43, .35, 1.47);
+}
+
+
+/* toggle icon animation */
+#check:checked~.button span:nth-child(1) {
+    width: 100%;
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+#check:checked~.button span:nth-child(2) {
+    width: 0;
+}
+
+#check:checked~.button span:nth-child(3) {
+    width: 100%;
+    transform: rotate(-45deg) translateY(-7px) translateX(7px);
+}
+
+.btnhide {
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== navbar End ====== */
+
+/* ===== hiro section start ======  */
+
+
+.main-hiro-sec-row {
+    width: 100%;
+    margin: auto !important;
+}
+
+.left-sidehirobg {
+    background: url(left-sidehirobg.png) no-repeat;
+    background-size: cover;
+}
+
+.right-sidehirobg {
+    background-color: #312f2f;
+    padding: 0% !important;
+}
+
+.hirocntr {
+    margin-left: 24%;
+}
+
+.hiro-right-content {
+    background: url(right-sidehirobg.png) no-repeat;
+    margin-left: -14%;
+    background-position-y: 50%;
+    padding-top: 22%;
+    padding-bottom: 22%;
+    position: relative;
+}
+
+.hiro-right-content::before {
+    position: absolute;
+    content: " ";
+    background: url(hiroabslutbgimg.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 80%;
+    top: 0;
+    background-position: center;
+}
+
+.head-hiro {
+    font-size: 100px;
+    color: #ffc200;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+}
+
+.hiro-pera {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    width: 100%;
+}
+
+
+.hiro-button {
+    border-radius: 4px;
+    background-color: #ffc200 !important;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 700 !important;
+    font-family: "Montserrat";
+    font-size: 14px !important;
+    padding: 12px 30px !important;
+    position: relative;
+}
+
+.active {
+    color: #ffc200 !important;
+}
+
+.nav-link:hover {
+    color: #ffc200 !important;
+}
+
+/* ===== hiro section End ======= */
+
+/* ==== back to top button start ==== */
+
+.go-top {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    display: none;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    background: #ffc200;
+    color: white;
+    border-radius: 25px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 32px;
+    z-index: 1000;
+}
+
+
+.go-top:hover {
+    transition: all .4s linear;
+    transform: scale(1.1);
+}
+
+/* ==== back to top button End ==== */
+
+/* ==== progress line start ====  */
+
+
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #ffc200;
+    width: 100%;
+    height: 6px;
+    scale: 0 1;
+    pointer-events: none;
+    transform-origin: left;
+    animation: scaleUp linear;
+    animation-timeline: scroll();
+
+    &.top-to-bottom {
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: 6px;
+        scale: 1 0;
+        transform-origin: top;
+    }
+
+    &.right-to-left {
+        top: auto;
+        bottom: 0;
+        transform-origin: right;
+    }
+
+    &.bottom-to-top {
+        height: 100%;
+        width: 6px;
+        scale: 1 0;
+        transform-origin: bottom;
+    }
+}
+
+
+@keyframes scaleUp {
+    to {
+        scale: 1 1;
+    }
+}
+
+/* ==== progress line End ==== */
+
+/* ===== best seller start ====== */
+
+.best-seller-maincnctrnr {
+    padding: 2%;
+}
+
+.main-row-bstser {
+    padding: 2%;
+    width: 100%;
+    margin: auto !important;
+}
+
+.one-crd {
+    background-color: pink;
+}
+
+.card-title {
+    font-size: 30px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.card {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.bsr-sller-head {
+    font-size: 40px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+    margin-top: 6%;
+    text-shadow: -3px 5px 6px #0000008c;
+}
+
+.bst-sler-pera {
+    font-size: 25px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+/* ====== best seller End =====  */
+
+/* <!-- ===== test section start =====  --> */
+
+.test-section-mn {
+    background: url(rotate.png) no-repeat;
+    background-size: 107%;
+    padding: 0% !important;
+    background-position-x: 46%;
+}
+
+.rw-testmn {
+    width: 100%;
+    margin: auto !important;
+    padding: 3%;
+    /* background: red; */
+}
+
+.tst-clm-one {
+    padding: 2%;
+    /* background-color: #303030; */
+}
+
+.tstimg {
+    background: url(border-r.png) no-repeat;
+    background-size: cover;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.tst-clm-two {
+    padding: 2%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+}
+
+
+/* <!-- ====== test section End =====  --> */
+
+/* ===== Statistics section start ====== */
+
+.statistics-main-cntrn {
+    background-color: #313030;
+    position: relative;
+}
+
+.statistics-main-cntrn::before {
+    position: absolute;
+    content: " ";
+    background: url(statistics-main-cntrn.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+.stitcks-head {
+    font-size: 100px;
+    color: #ffc200;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+.staticts-pera {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.rw-staticks {
+    /* background: red; */
+    width: 80%;
+    margin: auto !important;
+    padding: 2%;
+    margin-top: 2% !important;
+}
+
+.cl-onestatick {
+    /* background: green; */
+}
+
+.brd-stticrdus {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+}
+
+.brdr-inside-head {
+    font-size: 48px;
+    color: #ffc200;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.brdr-nside-pera {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.exjsdiv {
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+/* ==== Statistics section End ===== */
+
+/* <!-- ===== chicken section-start ==== --> */
+
+.test-section-mn-two {
+    background: url(yroyete.png) no-repeat;
+    background-size: 107%;
+    padding: 0% !important;
+    background-position-x: 46%;
+    background-position-y: bottom;
+}
+
+.main-test-cnctsec-two {
+    margin-left: 28%;
+}
+
+.tst-clm-two-two {
+    padding: 2%;
+    align-items: center;
+}
+
+.tstimg-sec {
+    background: url(seccrclimg.png) no-repeat;
+    background-size: cover;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.rw-testmn-two {
+    width: 100%;
+    margin: auto !important;
+    padding: 0%;
+    /* background: red; */
+}
+
+.tst-clm-one-ttwo {
+    padding: 2%;
+    /* background-color: #303030; */
+}
+
+.head-one-hiro-two {
+    font-size: 90px;
+    color: #ffc200;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    width: fit-content;
+}
+
+/* <!-- ===== chicken section-End ==== --> */
+
+/* <!-- ==== Lenora Fields section start ==== --> */
+
+.lenora-secmn-bg {
+    background: url(4thsecimgbg.png) no-repeat;
+    background-size: cover;
+    margin-top: 5%;
+    padding-top: 15%;
+    padding-bottom: 12%;
+}
+
+.lenor-mainhead {}
+
+.head-lenore {
+    font-size: 74px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+    margin-top: 2%;
+    text-shadow: -3px 5px 6px #0000008c;
+}
+
+.lmnp-one {
+    font-size: 34px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    width: 55%;
+    margin: auto;
+}
+
+
+
+/* <!-- ==== Lenora Fields section End ====  --> */
+
+/* ==== section subscribe start ====  */
+
+.subscribe-section-main {
+    background: #f3f3f3;
+    padding: 2%;
+    position: relative;
+}
+
+.subscribe-section-main::before {
+    position: absolute;
+    content: " ";
+    background: url(sec-4thmnbg.png) no-repeat;
+    background-size: contain;
+    width: 99%;
+    height: 92%;
+    background-position: bottom;
+}
+
+.lenor-mainhead-4th {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.lmnp-one-two {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+    width: 55%;
+    margin: auto;
+}
+
+.itp-sbscr {
+    border: none !important;
+    outline: none;
+    box-shadow: none !important;
+    opacity: 0.502;
+    font-size: 18px !important;
+    color: #333333 !important;
+    font-weight: 400 !important;
+    font-family: "Montserrat";
+}
+
+.main-inptgrp {
+    width: 45% !important;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.subscribe-btnstng {
+    border: none !important;
+}
+
+/* ==== section subscribe End ==== */
+
+/* ==== footer start ====  */
+
+.ftr-maincntnr {
+    padding: 6% 0% 6% 0% !important;
+    background-color: #303030;
+}
+
+.row-mn-ftr {
+    width: 100%;
+    margin: auto !important;
+}
+
+.clm-6ftr {
+    padding: 2%;
+}
+
+.clm-2-ftr {
+    padding: 2%;
+}
+
+.clm-3-ftr {
+    padding: 2%;
+}
+
+.clm-4-ftr {
+    padding: 2%;
+}
+
+.ftr-cnct-mn {
+    padding-left: 15%;
+}
+
+.hed-ftrmn {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.ftr-pera-mn {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    width: 60%;
+}
+
+.socialftr {
+    padding: 0%;
+    width: 40%;
+}
+
+.bibgsocial {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    line-height: 43px;
+    font-size: 20px;
+}
+
+.bibgsocial a {
+    color: black;
+}
+
+.abt-line {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    padding: 0%;
+}
+
+.abt-line li {
+    list-style: none;
+}
+
+.abt-line li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.head-one-hiro {
+    font-size: 75px;
+    color: #ffc200;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+}
+
+.itpmnmn {
+    display: none;
+}
+
+.searchany-itp {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #0000008c;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    padding: 2% 2% 2% 6%;
+}
+
+.srch-dv {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==== footer End ==== */
+
+@media only screen and (max-width: 992px) {
+
+    .hiro-right-content {
+        background: url(right-sidehirobg.png) no-repeat;
+        margin-left: -14%;
+        background-position-y: 27%;
+        padding-top: 22%;
+        padding-bottom: 22%;
+        position: relative;
+    }
+
+    .head-hiro {
+        font-size: 60px;
+        color: #ffc200;
+        font-weight: 400;
+        font-family: "Grand Hotel";
+    }
+
+    .hiro-pera {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Montserrat";
+        width: 100%;
+    }
+
+
+    .hiro-right-content::before {
+        position: absolute;
+        content: " ";
+        background: url(hiroabslutbgimg.png) no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: 80%;
+        top: 25px;
+        background-position: center;
+    }
+
+    .mdscreen {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .tstimg {
+        background: url(border-r.png) no-repeat;
+        background-size: cover;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .head-one-hiro,
+    .stitcks-head,
+    .head-one-hiro-two {
+        font-size: 60px;
+    }
+
+    .staticts-pera,
+    .brdr-nside-pera {
+        font-size: 18px;
+    }
+
+    .brd-stticrdus {
+        width: 140px;
+        height: 140px;
+    }
+
+    .brdr-inside-head {
+        font-size: 30px;
+    }
+
+    .test-section-mn {
+        background: url(rotate.png) no-repeat;
+        background-size: 109%;
+        padding: 0% !important;
+        background-position-x: 46%;
+    }
+
+    .statistics-main-cntrn {
+        background-color: #313030;
+        position: relative;
+        margin-top: -1px;
+    }
+
+    .test-section-mn-two {
+        background: url(yroyete.png) no-repeat;
+        background-size: 109%;
+        padding: 0% !important;
+        background-position-x: 46%;
+        background-position-y: bottom;
+        margin-top: -1px;
+    }
+
+    .tstimg-sec {
+        background: url(seccrclimg.png) no-repeat;
+        background-size: cover;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .lmnp-one {
+        font-size: 28px;
+        color: #333333;
+        font-weight: 400;
+        font-family: "Montserrat";
+        text-align: center;
+        width: 70%;
+        margin: auto;
+    }
+
+    .lmnp-one-two {
+        font-size: 28px;
+        color: #333333;
+        font-weight: 400;
+        font-family: "Montserrat";
+        text-align: center;
+        width: 70%;
+        margin: auto;
+    }
+
+    .subscribe-section-main::before {
+        position: absolute;
+        content: " ";
+        background: url(sec-4thmnbg.png) no-repeat;
+        background-size: contain;
+        width: 97%;
+        height: 95%;
+        background-position: bottom;
+    }
+
+    .socialftr {
+        padding: 0%;
+        width: 65%;
+    }
+
+    .ftr-pera-mn {
+        font-size: 18px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Montserrat";
+        width: 100%;
+    }
+
+    .abt-line li a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Montserrat";
+    }
+
+    .abt-line {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Montserrat";
+        padding: 0%;
+        line-height: 24px;
+    }
+
+    .hed-ftrmn {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Montserrat";
+    }
+
+    .mngmntul {
+        width: 100%;
+        margin-left: 5%;
+        justify-content: space-between;
+    }
+
+    .itpmnmn {
+        position: absolute;
+        bottom: 0;
+        right: 33px;
+        top: 76px;
+        width: 43%;
+    }
+
+    .searchany-itp {
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        background: #0000008c;
+        border: 1px solid #ffc200;
+        color: #ffc200;
+        font-size: 14px;
+        padding: 2% 2% 2% 6%;
+        width: 100%;
+    }
+
+    .searchany-itp::placeholder {
+        color: #ffc200;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .hiro-right-content::before {
+        position: absolute;
+        content: " ";
+        background: url(hiroabslutbgimg.png) no-repeat;
+        width: 100%;
+        height: 100%;
+        background-size: 80%;
+        top: 0;
+        background-position: center;
+        display: none;
+    }
+
+    .left-sidehirobg {
+        padding: 45%;
+    }
+
+    .head-hiro {
+        font-size: 70px;
+    }
+
+    .hiro-pera {
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Montserrat";
+        width: 100% !important;
+    }
+
+    .hirocntr,
+    .hiro-right-content {
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        width: 75%;
+    }
+
+    .main-hiro-cnctsec {
+        margin-left: 0%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .head-one-hiro {
+        font-size: 60px;
+        margin: auto;
+    }
+
+    .hiro-pera,
+    .socialftr {
+        width: 100%;
+    }
+
+    .mngmntul {
+        width: 50%;
+        margin-left: 5%;
+        justify-content: space-between;
+    }
+
+    .bst-sler-pera {
+        font-size: 16px;
+        color: #333333;
+        font-weight: 400;
+        font-family: "Montserrat";
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    .tstimg {
+        background: url(border-r.png) no-repeat;
+        background-size: cover;
+        width: 245px;
+        height: 245px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .test-section-mn {
+        background: url(rotate.png) no-repeat;
+        background-size: 107%;
+        padding: 0% !important;
+        padding-top: 23% !important;
+        background-position-x: 30%;
+    }
+
+    .rw-testmn {
+        width: 100%;
+        margin: auto !important;
+        background-color: #303030;
+    }
+
+    .main-test-cnctsec {
+        text-align: center;
+    }
+
+    /* ===== Statistics section start =====  */
+
+    .brd-stticrdus {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 6%;
+    }
+
+    .stitcks-head {
+        font-size: 65px;
+    }
+
+    .staticts-pera,
+    .ftr-pera-mn {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .brdr-nside-pera {
+        font-size: 22px;
+    }
+
+    .brdr-inside-head {
+        font-size: 35px;
+    }
+
+    .statistics-main-cntrn::before {
+        display: none;
+    }
+
+    /* ==== Statistics section End ===== */
+
+    /* <!-- ===== chicken section-start ==== --> */
+
+    .tstimg-sec {
+        background: url(seccrclimg.png) no-repeat;
+        background-size: cover;
+        width: 245px;
+        height: 245px;
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 4%;
+    }
+
+    .tst-clm-one-ttwo {
+        padding: 2%;
+        background-color: #303030;
+        margin-bottom: 25%;
+    }
+
+    .tst-clm-two-two {
+        padding: 2%;
+        align-items: center;
+        background-color: #303030;
+    }
+
+    .main-test-cnctsec-two {
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    .head-one-hiro-two {
+        font-size: 60px;
+        margin: auto;
+    }
+
+    /* <!-- ===== chicken section-End ==== --> */
+
+    /* <!-- ==== Lenora Fields section start ==== --> */
+
+    .lmnp-one {
+        font-size: 21px;
+        width: 100%;
+    }
+
+    .head-lenore {
+        font-size: 50px;
+    }
+
+    /* <!-- ==== Lenora Fields section End ====  --> */
+
+    /* ==== subscribe section start ==== */
+
+    .lmnp-one-two {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .main-inptgrp {
+        width: 100% !important;
+        margin: auto;
+        margin-top: 3%;
+    }
+
+    .subscribe-btnstng {
+        padding: 12px 8px !important;
+    }
+
+    .subscribe-section-main::before {
+        display: none;
+    }
+
+    /* ==== subscribe section End ==== */
+
+    /* ==== footer start ====  */
+
+    .respo-ftr {
+        width: 25% !important;
+    }
+
+    .ftr-cnct-mn {
+        padding-left: 0%;
+    }
+
+    .socialftr {
+        margin: auto !important;
+    }
+
+    /* ==== footer End ====  */
+
+};
+
